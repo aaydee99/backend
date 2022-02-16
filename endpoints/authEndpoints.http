@@ -1,0 +1,32 @@
+@host = http://localhost:4000
+@token = this is a JWT placeholder
+
+POST {{host}}/auth/register
+Content-Type: application/json
+
+{
+   "name": "Coco",
+   "email": "coco@gmail.com",
+   "password": "Coco@2",
+   "phone": "09223456789"
+}
+
+###
+
+POST {{host}}/auth/login
+Content-Type: application/json
+
+{
+   "email": "coco@gmail.com",
+   "password": "Coco@2"
+}
+
+###
+
+GET {{host}}/auth/me
+Authorization: Bearer {{token}}
+
+###
+
+GET {{host}}/auth/logout
+Authorization: Bearer {{token}}

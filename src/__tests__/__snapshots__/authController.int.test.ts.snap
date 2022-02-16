@@ -1,0 +1,144 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GET_logout controller tests CAN'T logout if not logged in 1`] = `
+Object {
+  "errors": Array [
+    Object {
+      "message": "user is unauthorized",
+      "path": "user",
+    },
+  ],
+}
+`;
+
+exports[`GET_logout controller tests can logout if logged in 1`] = `
+Object {
+  "success": true,
+}
+`;
+
+exports[`GET_logout controller tests can logout if logged in 2`] = `
+Object {
+  "errors": Array [
+    Object {
+      "message": "user is unauthorized",
+      "path": "user",
+    },
+  ],
+}
+`;
+
+exports[`GET_me controller tests CAN'T get "me" if not logged in 1`] = `
+Object {
+  "errors": Array [
+    Object {
+      "message": "user is unauthorized",
+      "path": "user",
+    },
+  ],
+}
+`;
+
+exports[`GET_me controller tests can get "me" if logged in 1`] = `
+Object {
+  "email": "coco@gmail.com",
+  "name": "Coco",
+  "phone": "09223456789",
+  "role": "MEMBER",
+  "status": "NONE",
+  "totalBooksCheckedout": 0,
+}
+`;
+
+exports[`POST_login controller tests CAN'T login incorrect credentials 1`] = `
+Object {
+  "errors": Array [
+    Object {
+      "message": "email or password is incorrect",
+      "path": "email",
+    },
+  ],
+}
+`;
+
+exports[`POST_login controller tests CAN'T login incorrect credentials 2`] = `
+Object {
+  "errors": Array [
+    Object {
+      "message": "email or password is incorrect",
+      "path": "email",
+    },
+  ],
+}
+`;
+
+exports[`POST_login controller tests can login correct credentials 1`] = `
+Object {
+  "email": "coco@gmail.com",
+  "name": "Coco",
+  "phone": "09223456789",
+  "role": "MEMBER",
+  "status": "NONE",
+  "totalBooksCheckedout": 0,
+}
+`;
+
+exports[`POST_login controller tests validation works 1`] = `
+Object {
+  "errors": Array [
+    Object {
+      "message": "email must be a valid email",
+      "path": "email",
+    },
+    Object {
+      "message": "password is a required field",
+      "path": "password",
+    },
+  ],
+}
+`;
+
+exports[`POST_register controller tests CAN'T register already taken email 1`] = `
+Object {
+  "errors": Array [
+    Object {
+      "message": "email is already registered",
+      "path": "email",
+    },
+  ],
+}
+`;
+
+exports[`POST_register controller tests can register not taken email 1`] = `
+Object {
+  "email": "coco@gmail.com",
+  "name": "Coco",
+  "phone": "09223456789",
+  "role": "MEMBER",
+  "status": "NONE",
+  "totalBooksCheckedout": 0,
+}
+`;
+
+exports[`POST_register controller tests validation works 1`] = `
+Object {
+  "errors": Array [
+    Object {
+      "message": "name is a required field",
+      "path": "name",
+    },
+    Object {
+      "message": "email must be a valid email",
+      "path": "email",
+    },
+    Object {
+      "message": "password must be at least 6 characters",
+      "path": "password",
+    },
+    Object {
+      "message": "phone is a required field",
+      "path": "phone",
+    },
+  ],
+}
+`;
